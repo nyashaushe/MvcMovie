@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Welcome";
+    var message = ViewData["Message"] as string ?? "Hello";
+    var numTimes = 0;
+    if (ViewData["NumTimes"] is int n)
+    {
+        numTimes = n;
+    }
+}
+
+<h2>Welcome</h2>
+
+<ul>
+    @for (int i = 0; i < numTimes; i++)
+    {
+        <li>@message</li>
+    }
+</ul>
